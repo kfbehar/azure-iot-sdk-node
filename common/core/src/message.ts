@@ -56,6 +56,11 @@ export class Message {
   contentEncoding: undefined | 'utf-8' | 'utf-16' | 'utf-32';
 
   /**
+   * Is this message a security message
+   */
+  interfaceId: string;
+
+  /**
    * @private
    */
   transportObj: any;
@@ -105,6 +110,13 @@ export class Message {
       /*Codes_SRS_NODE_IOTHUB_MESSAGE_07_002: [If the data message is of any other type then the data will be converted to a Buffer object and returned.]*/
       return Buffer.from(this.data);
     }
+  }
+
+  /**
+   * Sets this message as a security message
+   */
+  setAsSecurityMessage(): void {
+    this.interfaceId = 'urn:azureiot:Security:SecurityAgent:1';
   }
 
   /**

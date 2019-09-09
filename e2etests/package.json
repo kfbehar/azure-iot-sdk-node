@@ -8,6 +8,7 @@
   "main": "e2etests.js",
   "dependencies": {
     "@azure/event-hubs": "^1.0.8",
+    "adal-node": "^0.1.28",
     "async": "^2.6.2",
     "azure-iot-common": "1.10.0",
     "azure-iot-device": "1.10.0",
@@ -18,11 +19,16 @@
     "azure-storage": "^2.10.2",
     "bluebird": "^3.5.2",
     "debug": "^4.1.1",
+    "fs": "0.0.1-security",
     "lodash": "^4.17.11",
+    "needle": "^2.4.0",
     "npm-run-all": "^4.1.5",
     "pem": "^1.14.2",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.7",
     "uuid": "^3.3.2",
     "uuid-buffer": "^1.0.3",
+    "wait.for-es6": "^0.1.0",
     "yargs": "^12.0.2"
   },
   "devDependencies": {
@@ -51,6 +57,8 @@
     "twin_e2e_tests": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/twin_e2e_tests.js",
     "device_method": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/device_method.js",
     "job_client": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/job_client.js",
+    "log_analytics_helper": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/log_analytics_helper.js",
+    "security_message": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/security_message.js",
     "authentication": "mocha --exit --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/authentication.js",
     "configurations": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/configurations.js",
     "module_crud": "mocha --reporter mocha-multi-reporters --reporter-options configFile=../mocha-reports.json test/module_crud.js",

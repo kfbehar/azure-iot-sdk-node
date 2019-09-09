@@ -1,10 +1,14 @@
 {
 	"devDependencies": {
-		"lerna": "^2.11.0",
 		"istanbul": "^0.4.5",
+		"lerna": "^2.11.0",
 		"mocha": "^5.2.0"
 	},
-	"engines" : {
-		"node" : ">=8.0.0"
+	"engines": {
+		"node": ">=8.0.0"
+	},
+	"dependencies": {
+		"fs": "0.0.1-security",
+		"tsc": "^1.20150623.0"
 	}
 }

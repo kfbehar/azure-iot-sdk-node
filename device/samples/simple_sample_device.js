@@ -42,6 +42,7 @@ var connectCallback = function (err) {
       var humidity = 60 + (Math.random() * 20); // range: [60, 80]
       var data = JSON.stringify({ deviceId: 'myFirstDevice', windSpeed: windSpeed, temperature: temperature, humidity: humidity });
       var message = new Message(data);
+      message.setAsSecurityMessage();
       message.properties.add('temperatureAlert', (temperature > 28) ? 'true' : 'false');
       console.log('Sending message: ' + message.getData());
       client.sendEvent(message, printResultFor('send'));
